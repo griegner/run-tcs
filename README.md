@@ -35,6 +35,6 @@ below are some commands that can be passed to the TCS with the function run_tcs.
 | B       | battery charge                 | battery V and %         |       |
 | P       | displays stim parameters       | global, then each zone  |       |
 | H       | help                           | manual                  |       |
-| F       | disble current display of temp |                         |       |
+| F       | disable current display of temp |                         |       |
 | A       | abort current stim             |                         |       |
 | L       | start stim                     |                         |       |
