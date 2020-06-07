@@ -72,7 +72,7 @@ def stim(tcs, start):
     start_stim(tcs)
 
     # the tcs will return the current temperatures of the five zones at 100Hz
-    for i in range(1000):  # range dependent on parameter Y9999, writes 9.99sec of temp data
+    for _ in range(1000):    # range dependent on parameter Y9999, writes 9.99sec of temp data
         temp = tcs.read_until().decode().strip()
         temp = replace(temp, '+.')
 
@@ -99,16 +99,13 @@ def main():
 
         # start stim, run 10x
         start = time.time()
-        counter = 1
-        while counter <= 10:
+        for counter in range(1, 11):
 
             print('heat%d' % counter)
             stim(tcs, start)
 
             print('neutral%d' % counter)
             sleep(6)
-
-            counter += 1
 
     except KeyboardInterrupt:
         sleep(.001)
