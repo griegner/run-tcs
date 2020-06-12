@@ -8,7 +8,7 @@ control of the system using [serial commands](https://pyserial.readthedocs.io/en
 - set computer port: on OSX it will be /dev/cu.usbmodemNNN, where NNN is some number
 - to find ports run: `$ python -m serial.tools.list_ports`
 - to run: `$ python run_tcs.py`
-- to run with live plotting: `$ python plot_live.py; python run_tcs.py`
+- to run with live plotting: `$ python plot_live.py &; python run_tcs.py`
 
 below are some commands that can be passed to the TCS with the function run_tcs.set_parameters():
 
