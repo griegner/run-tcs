@@ -3,10 +3,11 @@ from datetime import datetime
 import time
 from time import sleep
 
+# `$ python -m serial.tools.list_ports`
 
 def open_port():
     # set port
-    tcs_port = '/dev/cu.usbmodem14101'
+    tcs_port = '/dev/cu.usbmodem14401'
     tcs = serial.Serial(tcs_port, baudrate=115200, timeout=1)
     sleep(.001)
     tcs.write(b'F')
@@ -81,7 +82,7 @@ def stim(tcs, start):
 
         if len(temp) > 1:
             with open('plot.txt', 'a') as file_out:
-                print('%f %f' % (x, y), file=file_out)
+                print('%s %s' % (x, y), file=file_out)
 
 
 def main():
