@@ -7,5 +7,5 @@ control of the system using [serial commands](https://pyserial.readthedocs.io/en
 - check connections: TCS to thermal probe, TCS to computer
 - set computer port: on OSX it will be /dev/cu.usbmodemNNN, where NNN is some number
 - to find ports run: `$ python -m serial.tools.list_ports`
-- to run: `$ python run_tcs.py`
-- to run with live plotting: `$ python plot_live.py &; python run_tcs.py`
+- to run: `$ python run-tcs.py`
+- to run with live plotting: `$ python plot-live.py &; python run-tcs.py`
